@@ -207,7 +207,7 @@ const DashboardLayout = () => {
             {/* Simple indicators */}
             <div className="hidden sm:flex items-center space-x-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-              <span>API connected</span>
+              {/* <span>API connected</span> */}
             </div>
             
             {/* Mobile User Profile Icon */}
