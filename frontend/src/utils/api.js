@@ -3,10 +3,10 @@ import axios from 'axios';
 const api = axios.create({
   // Vite injects the proper base URL depending on the build mode.
   // Development (npm run dev) → VITE_API_BASE_URL_LOCAL
-  // Production (Vercel)      → VITE_API_BASE_URL_PROD
-  baseURL: import.meta.env.DEV
-    ? import.meta.env.VITE_API_BASE_URL_LOCAL
-    : import.meta.env.VITE_API_BASE_URL_PROD,
+  // Production (Vercel)      → VITE_API_BASE_URL_PROD https://employee-management-6ud1.onrender.com
+  baseURL: import.meta.env.PROD
+    ? (import.meta.env.VITE_API_BASE_URL_PROD || "https://employee-management-6ud1.onrender.com/api")
+    : import.meta.env.VITE_API_BASE_URL_LOCAL,
   headers: {
     'Content-Type': 'application/json',
   },
