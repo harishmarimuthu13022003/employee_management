@@ -1,10 +1,15 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  // Vite injects the proper base URL depending on the build mode.
+  // Development (npm run dev) → VITE_API_BASE_URL_LOCAL
+  // Production (Vercel)      → VITE_API_BASE_URL_PROD
+  baseURL: import.meta.env.DEV
+    ? import.meta.env.VITE_API_BASE_URL_LOCAL
+    : import.meta.env.VITE_API_BASE_URL_PROD,
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 });
 
 // Interceptor to attach auth header
