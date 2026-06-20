@@ -1,5 +1,5 @@
 # Employee Management Dashboard (MERN Stack)
-
+**Live** : https://employee-management-delta-livid.vercel.app/
 A professional, scalable, and fully responsive Employee Management Dashboard featuring JWT authentication, full CRUD operations, search & filter utilities, and visual analytics dashboards.
 
 ---
